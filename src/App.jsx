@@ -3,10 +3,9 @@ import { auth } from "./firebase";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import VoiceRoom from './components/VoiceRoom'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
@@ -36,14 +35,19 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+    <div className="App">
+      <div
+        style={{
+          marginTop: '40px',
+          padding: '20px',
+          borderTop: '2px solid #646cff',
+        }}
+      >
+        <h2>Collaboration Room</h2>
+        <VoiceRoom />
       </div>
-
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
 export default App
-
