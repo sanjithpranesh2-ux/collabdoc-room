@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { auth } from "./firebase";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -21,6 +22,14 @@ function App() {
       <h2>Firebase feature – work in progress</h2>
 
       <div className="card">
+      <button
+      onClick={() => {
+      console.log("Auth object:", auth);
+      }}
+>
+      Test Firebase Auth
+      </button>
+
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
